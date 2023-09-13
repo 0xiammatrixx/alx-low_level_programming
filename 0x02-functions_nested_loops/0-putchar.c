@@ -1,10 +1,16 @@
-#include <main.h>
+#include "main.h"
+#include <unistd.h>
+#include <stddef.h>
 /**
  * main - Entry point
  *
  * Return: 0 (Success)
  */
 int main(void){
-	write(1,"_puchar\n")
+	const char message[] = "_putchar\n";
+	size_t length = sizeof(message) - 1;
+	write(1,message,length);
 	return (0);
 }
+	    
+
